@@ -1,0 +1,29 @@
+version: '3'
+services:
+  devops:
+    image: ramu478/train
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+
+  aws:
+    image: ramu478/recharge
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  datascience:
+    image: ramu478/dth
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+
+  azure:
+    image: ramu478/movie
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
